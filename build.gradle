@@ -22,9 +22,16 @@ repositories {
 }
 
 dependencies {
+	// Config mapstruct with lombok
+	implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
+	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
+
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 //	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.2'
+
+	runtimeOnly 'org.postgresql:postgresql'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
